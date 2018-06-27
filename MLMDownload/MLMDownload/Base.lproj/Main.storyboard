@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0200fc20000bcofiilqg5b4ln3imip0&amp;line=0" borderStyle="roundedRect" placeholder="下载链接" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x0x-4J-Clm">
+                                <rect key="frame" x="16" y="237" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDw-iu-jSk">
+                                <rect key="frame" x="16" y="282.5" width="50" height="30"/>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tfI-wC-Of5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lce-0f-ZJv">
+                                <rect key="frame" x="162.5" y="282.5" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Knn-lI-4Ql"/>
+                                </constraints>
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="pauseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mSZ-Om-Q8j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsb-Au-hlV">
+                                <rect key="frame" x="309" y="282.5" width="50" height="30"/>
+                                <state key="normal" title="恢复"/>
+                                <connections>
+                                    <action selector="resumeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4nz-rB-PhM"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VQ1-bk-kAT">
+                                <rect key="frame" x="16" y="332.5" width="343" height="2"/>
+                            </progressView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EeB-Wp-gem">
+                                <rect key="frame" x="16" y="385.5" width="343" height="261.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICb-nf-Qvz">
+                                <rect key="frame" x="16" y="354.5" width="34.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lce-0f-ZJv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0EV-nQ-NC4"/>
+                            <constraint firstItem="ICb-nf-Qvz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3b1-iM-SBA"/>
+                            <constraint firstItem="vsb-Au-hlV" firstAttribute="bottom" secondItem="HDw-iu-jSk" secondAttribute="bottom" id="8vn-71-oE5"/>
+                            <constraint firstItem="lce-0f-ZJv" firstAttribute="height" secondItem="HDw-iu-jSk" secondAttribute="height" id="9FJ-3O-rrM"/>
+                            <constraint firstItem="vsb-Au-hlV" firstAttribute="trailing" secondItem="VQ1-bk-kAT" secondAttribute="trailing" id="AN6-YH-1TZ"/>
+                            <constraint firstItem="lce-0f-ZJv" firstAttribute="width" secondItem="HDw-iu-jSk" secondAttribute="width" id="Ddh-VT-MwL"/>
+                            <constraint firstItem="lce-0f-ZJv" firstAttribute="bottom" secondItem="HDw-iu-jSk" secondAttribute="bottom" id="Es1-JO-40O"/>
+                            <constraint firstAttribute="trailing" secondItem="VQ1-bk-kAT" secondAttribute="trailing" constant="16" id="Gnv-m2-03N"/>
+                            <constraint firstItem="EeB-Wp-gem" firstAttribute="top" secondItem="ICb-nf-Qvz" secondAttribute="bottom" constant="10" id="MAj-cs-ac2"/>
+                            <constraint firstItem="vsb-Au-hlV" firstAttribute="width" secondItem="HDw-iu-jSk" secondAttribute="width" id="OEm-ZV-4Wf"/>
+                            <constraint firstItem="ICb-nf-Qvz" firstAttribute="top" secondItem="VQ1-bk-kAT" secondAttribute="bottom" constant="20" id="PhX-sb-CkB"/>
+                            <constraint firstItem="vsb-Au-hlV" firstAttribute="height" secondItem="HDw-iu-jSk" secondAttribute="height" id="Xi9-T1-Wn0"/>
+                            <constraint firstItem="x0x-4J-Clm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zyr-Rb-mSB"/>
+                            <constraint firstItem="VQ1-bk-kAT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="dpP-aL-kX6"/>
+                            <constraint firstItem="VQ1-bk-kAT" firstAttribute="top" secondItem="lce-0f-ZJv" secondAttribute="bottom" constant="20" id="eDs-lo-GCh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EeB-Wp-gem" secondAttribute="trailing" constant="16" id="gzB-u2-UPW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x0x-4J-Clm" secondAttribute="trailing" constant="16" id="jkC-6l-hlA"/>
+                            <constraint firstItem="HDw-iu-jSk" firstAttribute="top" secondItem="x0x-4J-Clm" secondAttribute="bottom" constant="15" id="kvs-zF-KB5"/>
+                            <constraint firstItem="VQ1-bk-kAT" firstAttribute="leading" secondItem="HDw-iu-jSk" secondAttribute="leading" id="p6Q-bN-W9u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EeB-Wp-gem" secondAttribute="bottom" constant="20" id="q7x-s3-gam"/>
+                            <constraint firstItem="EeB-Wp-gem" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rx2-7c-8ro"/>
+                            <constraint firstItem="VQ1-bk-kAT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uE9-fM-AMF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pauseBtn" destination="lce-0f-ZJv" id="Eh9-Fv-i7k"/>
+                        <outlet property="progress" destination="VQ1-bk-kAT" id="P8w-fU-gGW"/>
+                        <outlet property="progressLab" destination="ICb-nf-Qvz" id="1Tx-a9-Spx"/>
+                        <outlet property="resumeBtn" destination="vsb-Au-hlV" id="ZGu-Rd-A51"/>
+                        <outlet property="startBtn" destination="HDw-iu-jSk" id="oY5-hs-HOn"/>
+                        <outlet property="stateTextView" destination="EeB-Wp-gem" id="2HW-0J-U8r"/>
+                        <outlet property="urlTf" destination="x0x-4J-Clm" id="bC0-hf-AKn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
