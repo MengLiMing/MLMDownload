@@ -18,6 +18,7 @@
 		048FF39620E380B2004E3CBB /* MLMDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 048FF39420E380B2004E3CBB /* MLMDownloadManager.m */; };
 		048FF39920E380D0004E3CBB /* MLMDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 048FF39720E380D0004E3CBB /* MLMDownloadRequest.m */; };
 		048FF39C20E380DB004E3CBB /* MLMDownloadRequest+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 048FF39A20E380DB004E3CBB /* MLMDownloadRequest+Helper.m */; };
+		A602ED89B9EADC572FC4DF29 /* Pods_MLMDownload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1903A9689913ED0FA2D23195 /* Pods_MLMDownload.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,9 @@
 		048FF39820E380D0004E3CBB /* MLMDownloadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMDownloadRequest.h; sourceTree = "<group>"; };
 		048FF39A20E380DB004E3CBB /* MLMDownloadRequest+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MLMDownloadRequest+Helper.m"; sourceTree = "<group>"; };
 		048FF39B20E380DB004E3CBB /* MLMDownloadRequest+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MLMDownloadRequest+Helper.h"; sourceTree = "<group>"; };
+		1903A9689913ED0FA2D23195 /* Pods_MLMDownload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLMDownload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F34A1983CBCBF7BD3CD242C /* Pods-MLMDownload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLMDownload.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLMDownload/Pods-MLMDownload.debug.xcconfig"; sourceTree = "<group>"; };
+		BD2E9323309B13647A122FE8 /* Pods-MLMDownload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLMDownload.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLMDownload/Pods-MLMDownload.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A602ED89B9EADC572FC4DF29 /* Pods_MLMDownload.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +99,8 @@
 				048FF37920E37BA8004E3CBB /* MLMDownloadTests */,
 				048FF38420E37BA8004E3CBB /* MLMDownloadUITests */,
 				048FF35F20E37BA6004E3CBB /* Products */,
+				923F4ECBC72024F48AB43C6F /* Pods */,
+				2CE6BD92C0CD9B9BA28920E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +162,23 @@
 			path = MLMDownload;
 			sourceTree = "<group>";
 		};
+		2CE6BD92C0CD9B9BA28920E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1903A9689913ED0FA2D23195 /* Pods_MLMDownload.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		923F4ECBC72024F48AB43C6F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F34A1983CBCBF7BD3CD242C /* Pods-MLMDownload.debug.xcconfig */,
+				BD2E9323309B13647A122FE8 /* Pods-MLMDownload.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 048FF38A20E37BA8004E3CBB /* Build configuration list for PBXNativeTarget "MLMDownload" */;
 			buildPhases = (
+				98D54503C60A6C73C8FDC920 /* [CP] Check Pods Manifest.lock */,
 				048FF35A20E37BA6004E3CBB /* Sources */,
 				048FF35B20E37BA6004E3CBB /* Frameworks */,
 				048FF35C20E37BA6004E3CBB /* Resources */,
+				DB3F7284A0DDA67ECF8FE686 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,6 +305,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98D54503C60A6C73C8FDC920 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MLMDownload-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB3F7284A0DDA67ECF8FE686 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MLMDownload/Pods-MLMDownload-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLMDownload/Pods-MLMDownload-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		048FF35A20E37BA6004E3CBB /* Sources */ = {
@@ -457,11 +522,13 @@
 		};
 		048FF38B20E37BA8004E3CBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F34A1983CBCBF7BD3CD242C /* Pods-MLMDownload.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5MEUQ98276;
 				INFOPLIST_FILE = MLMDownload/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,11 +541,13 @@
 		};
 		048FF38C20E37BA8004E3CBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD2E9323309B13647A122FE8 /* Pods-MLMDownload.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5MEUQ98276;
 				INFOPLIST_FILE = MLMDownload/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
